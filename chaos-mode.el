@@ -115,8 +115,9 @@
 (define-derived-mode chaos-mode prog-mode "Chaos"
   "A major mode for the Chaos programming language."
   :syntax-table chaos-mode-syntax-table
-  (setq-local font-lock-defaults '(chaos-font-lock-keywords)))
-
+  (setq-local font-lock-defaults '(chaos-font-lock-keywords))
+  (setq-local comment-start "# ")
+  (setq-local comment-end ""))
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.kaos\\'" . chaos-mode))
 
